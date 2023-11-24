@@ -29,26 +29,27 @@ if (isset($_POST['add_to_wishlist'])) {
     }
 }
 
-if (isset($_POST['add_to_cart'])) {
+if(isset($_POST['add_to_cart'])){
     $car_id = $_POST['car_id'];
     $car_name = $_POST['car_name'];
     $car_price = $_POST['car_price'];
     $car_image = $_POST['car_image'];
     $car_quantity = $_POST['car_quantity'];
 
+    // Debugging statement
+    echo "car ID: $car_id, Name: $car_name, Price: $car_price, Image: $car_image, Quantity: $car_quantity";
+
     $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$car_name' AND user_id = '$user_id'") or die('query failed');
 
-    if (mysqli_num_rows($check_cart_numbers) > 0) {
-        $message[] = 'Car is already added to your cart';
+    if(mysqli_num_rows($check_cart_numbers) > 0){
+        $message[] = 'already added to cart';
     } else {
-        $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE name = '$car_name' AND user_id = '$user_id'") or die('query failed');
+        // Debugging statement
+        echo "Inserting into cart table";
 
-        if (mysqli_num_rows($check_wishlist_numbers) > 0) {
-            mysqli_query($conn, "DELETE FROM `wishlist` WHERE name = '$car_name' AND user_id = '$user_id'") or die('query failed');
-        }
+        mysqli_query($conn, "INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES('$user_id', '$car_id', '$car_name', '$car_price', '$car_quantity', '$car_image')") or die(mysqli_error($conn));
 
-        mysqli_query($conn, "INSERT INTO `cart` (user_id, cid, name, price, quantity, image) VALUES ('$user_id', '$car_id', '$car_name', '$car_price', '$car_quantity', '$car_image')") or die('query failed');
-        $message[] = 'Car added to cart';
+        $message[] = 'product added to cart';
     }
 }
 ?>
