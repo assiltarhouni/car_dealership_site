@@ -6,10 +6,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>wishlist</title>
 
-   <!-- font awesome cdn link  -->
+   
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-   <!-- custom admin CSS file link  -->
+   
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -34,7 +34,6 @@
                     <a href="wishlist.php?delete=<?php echo $fetch_wishlist['id']; ?>"
                        class="fas fa-times"
                        onclick="return confirm('Delete this from wishlist?');"></a>
-                    <a href="view_page.php?pid=<?php echo $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
                     <img src="cars/<?php echo $fetch_wishlist['image']; ?>" alt="" class="image">
                     <div class="name"><?php echo $fetch_wishlist['name']; ?></div>
                     <div class="price">$<?php echo $fetch_wishlist['price']; ?>/-</div>
@@ -51,7 +50,7 @@
             echo '<p class="empty">your wishlist is empty</p>';
         }
         if (isset($_GET['delete_all'])) {
-            // Delete all items from the wishlist for the current user
+            
             $delete_all_query = mysqli_query($conn, "DELETE FROM `wishlist` WHERE user_id = '$user_id'") or die('query failed');
             if ($delete_all_query) {
                 header('location: wishlist.php');

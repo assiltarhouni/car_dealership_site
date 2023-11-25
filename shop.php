@@ -86,7 +86,6 @@ if(isset($_POST['add_to_cart'])){
             while ($fetch_cars = mysqli_fetch_assoc($select_cars)) {
       ?>
       <form action="" method="POST" class="box">
-         <a href="view_page.php?cid=<?php echo $fetch_cars['id']; ?>" class="fas fa-eye"></a>
          <div class="price">$<?php echo $fetch_cars['price']; ?>/-</div>
          <img src="cars/<?php echo $fetch_cars['image']; ?>" alt="" class="image">
          <div class="name"><?php echo $fetch_cars['name']; ?></div>

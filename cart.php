@@ -38,10 +38,8 @@ if(isset($_POST['update_quantity'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>shopping cart</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-   <!-- custom admin css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -68,7 +66,6 @@ if(isset($_POST['update_quantity'])){
     ?>
     <div  class="box">
         <a href="cart.php?delete=<?php echo $fetch_cart['id']; ?>" class="fas fa-times" onclick="return confirm('delete this from cart?');"></a>
-        <a href="view_page.php?pid=<?php echo $fetch_cart['pid']; ?>" class="fas fa-eye"></a>
         <img src="cars/<?php echo $fetch_cart['image']; ?>" alt="" class="image">
         <div class="name"><?php echo $fetch_cart['name']; ?></div>
         <div class="price">$<?php echo $fetch_cart['price']; ?>/-</div>

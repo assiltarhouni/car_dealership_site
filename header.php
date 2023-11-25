@@ -1,5 +1,5 @@
 <?php
-@include 'config.php'; // Include the database connection file here
+@include 'config.php';
 
 session_start();
 
