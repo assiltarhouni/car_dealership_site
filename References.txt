@@ -1,0 +1,8 @@
+References:
+1)https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+2)https://www.codewithfaraz.com/article/74/step-by-step-guide-connecting-php-to-mysql-database-with-xampp
+3)https://medium.com/@sapphdek/learn-how-to-build-a-website-using-html-css-php-mysql-af385524a5d6
+4)https://stackoverflow.com/
+5)https://chat.openai.com/
+6)https://bard.google.com/chat
+7)https://www.youtube.com/watch?v=aYWGYUda9Ns&ab_channel=Taversity
