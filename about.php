@@ -40,7 +40,7 @@ if (!isset($user_id)) {
 
         <div class="content">
             <h3>Why Choose Us?</h3>
-            <p> We offer a wide range of high-quality cars to meet your needs.</p>
+            <p> We offer a wide range of high-quality cars and automotive parts to meet your needs.</p>
             <a href="shop.php" class="btn">Shop Now</a>
         </div>
 

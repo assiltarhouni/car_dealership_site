@@ -184,11 +184,7 @@
 
 
 
-.btn:hover,
-.delete-btn:hover,
-.option-btn:hover{
-   background-color: var(--secondary-color);
-}
+
 
 .empty{
    padding:1.5rem;
@@ -212,10 +208,7 @@
    font-size: 2.5rem;
    padding:.5rem 0;
 }
-.home-contact .content .btn:hover{
-   background-color: var(--white);
-   color:var(--black);
-}
+
 .quick-view form .type{
    padding:1rem 0;
    font-size: 1.5rem;
@@ -352,10 +345,7 @@ option-btn{
    padding-right: 1rem;
 }
 
-.footer .box-container a:hover{
-   text-decoration: underline;
-   color:var(--pink);
-}
+
 
 .footer .credit{
    text-align: center;
@@ -370,11 +360,7 @@ option-btn{
    color:var(--pink);
 }
 
-.btn:hover,
-.delete-btn:hover,
-option-btn:hover{
-   background-color: var(--secondary-color);
-}
+
 
 .empty{
    padding: 1.5rem;
@@ -414,14 +400,46 @@ option-btn:hover{
    font-size: 2.5rem;
    color: var(--light-color);
 }
-
-.heading p a{
-   color: var(--primary-color);
+.header .flex .navbar ul{
+   list-style: none;
 }
 
-.heading p a:hover{
-   text-decoration: underline;
+.header .flex .navbar ul li{
+   float: left;
+   position: relative;
 }
+
+.header .flex .navbar ul li a{
+   font-size: 2rem;
+   padding: 1rem 1.5rem;
+   display: block;
+   color: var(--light-color);
+   text-transform: capitalize;
+}
+
+.header .flex .navbar ul li a:hover{
+   background-color: var(--primary-color);
+   color: #fff;
+}
+
+.header .flex .navbar ul li ul{
+   position: absolute;
+   left: 0;
+   width: 15rem;
+   background-color: #fff;
+   animation: fadeIn 0.2s linear;
+   display: none;
+}
+
+.header .flex .navbar ul li ul li{
+   width: 100%;
+}
+
+.header .flex .navbar ul li:hover ul{
+   display: inline-block;
+}
+
+
 
 .title{
    text-align: center;
@@ -431,11 +449,7 @@ option-btn:hover{
    font-size: 4rem;
 }
 
-@keyframes fadeIn{
-   0%{
-      transform: translateY(1rem);
-   }
-}
+
 
 .form-container{
    display: flex;
@@ -483,9 +497,7 @@ option-btn:hover{
    color: var(--primary-color);
 }
 
-.form-container form p a:hover{
-   text-decoration: underline;
-}
+
 
 .header{
    position: sticky;
@@ -529,17 +541,13 @@ option-btn:hover{
    text-transform: capitalize;
 }
 
-.header .flex .navbar ul li a:hover{
-   background-color: var(--primary-color);
-   color: #fff;
-}
+
 
 .header .flex .navbar ul li ul{
    position: absolute;
    left: 0;
    width: 15rem;
    background-color: #fff;
-   animation: fadeIn 0.2s linear;
    display: none;
 }
 
@@ -547,9 +555,7 @@ option-btn:hover{
    width: 100%;
 }
 
-.header .flex .navbar ul li:hover ul{
-   display: inline-block;
-}
+
 
 .header .flex .icons > *{
    font-size: 2.5rem;
@@ -558,9 +564,7 @@ option-btn:hover{
    cursor: pointer;
 }
 
-.header .flex .icons > *:hover{
-   color: var(--primary-color);
-}
+
 
 .header .flex .icons span{
    font-size: 2rem;
@@ -569,7 +573,10 @@ option-btn:hover{
 #menu-btn{
    display: none;
 }
-
+.footer .box-container a:hover{
+   text-decoration: underline;
+   color:var(--pink);
+}
 .header .flex .account-box{
    position: absolute;
    top: 120%;
@@ -582,7 +589,6 @@ option-btn:hover{
    border-radius: 0.5rem;
    width: 33rem;
    display: none;
-   animation: fadeIn 0.2s linear;
 }
 
 .header .flex .account-box.active{
@@ -601,9 +607,7 @@ option-btn:hover{
    cursor: pointer;
 }
 
-.header .flex .account-box p span:hover{
-   text-decoration: underline;
-}
+
 .contact form{
    max-width: 50rem;
    background-color: var(--white);
@@ -648,10 +652,7 @@ option-btn:hover{
    transition: background-color 0.2s linear;
 }
 
-.header .flex .account-box a:hover{
-   background-color: var(--secondary-color);
-   color: #fff;
-}
+
 
 .header .flex .search-box{
    position: absolute;
@@ -665,7 +666,6 @@ option-btn:hover{
    border-radius: 0.5rem;
    width: 33rem;
    display: none;
-   animation: fadeIn 0.2s linear;
 }
 
 .header .flex .search-box.active{
@@ -732,9 +732,7 @@ option-btn:hover{
    transition: background-color 0.2s linear;
 }
 
-.header .flex .search-box button:hover{
-   background-color: var(--secondary-color);
-}
+
 
 @media (max-width:991px){
 
